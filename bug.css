@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an issue where a pseudo-element (::before) is unexpectedly not inheriting the color style from its parent element. This behavior is non-standard and can lead to unexpected visual results.
+
+```css
+.parent {
+  color: blue;
+}
+
+.parent::before {
+  content: "Hello";
+}
+```
+
+In this scenario, the expectation is that the pseudo-element `::before` inherits the `color: blue` style from the parent. However, in some browsers or scenarios, it might render as the default text color (black) instead.
+
+This issue is more likely to appear with particular CSS declarations and certain browser versions.  It can be particularly challenging to debug because the behavior is inconsistent across different implementations.
