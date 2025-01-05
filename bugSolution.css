@@ -1,0 +1,27 @@
+To reliably ensure the pseudo-element inherits or displays the desired color, explicitly set the color property on the pseudo-element itself:
+
+```css
+.parent {
+  color: blue;
+}
+
+.parent::before {
+  content: "Hello";
+  color: inherit; /* Explicitly inherit color */
+}
+```
+
+Alternatively, specify the color directly:
+
+```css
+.parent {
+  color: blue;
+}
+
+.parent::before {
+  content: "Hello";
+  color: blue; /* Explicitly set color to blue */
+}
+```
+
+By explicitly setting the `color` property within the `::before` rule, we remove any ambiguity and ensure consistent rendering across different browsers and CSS contexts.
